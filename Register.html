@@ -1,0 +1,43 @@
+<html>
+	<head>
+	    <meta charset="utf-8"> 
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <script src="jquery-1.12.0.min.js"></script>
+	    <link rel="stylesheet" href="css/bootstrap.min.css">
+	    <script src="js/bootstrap.min.js"></script>
+   		<!--link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    	<!----script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script-->
+    	<!--script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script-->
+	</head>
+	<body>
+		<br><hr>
+	<div class="container"  >
+    <div class="row" >
+        <div style="width:400px; margin:0 auto; border: thin solid grey; border-radius: 25px;padding: 20px;">
+            <form method="POST" action="Register.php">
+                 <h2 class="text-center">Register</h2>
+                <br/>
+                <div class="form-group">
+                    <input type="email" name="user_name" class="form-control" id="userid" placeholder="email">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Password" >
+                </div>
+                <div class="form-group">
+                    <input type="text" name="age" class="form-control" id="age" placeholder="Age">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="place" class="form-control" id="place" placeholder="ZIP / PIN code">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="gender" class="form-control" id="gender" placeholder="Gender : M / F">
+                </div>
+                <br/>
+                <div class="align-center" style="text-align:center">
+                    <button type="submit" name="usher_id" class="btn btn-default" id="login">Register</button>
+                </div>
+            </form>
+        </div>
+    </div><!--login form-->
+	</body>
+</html>
