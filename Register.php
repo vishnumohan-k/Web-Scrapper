@@ -1,13 +1,18 @@
 <?php
 include ("dbconnect.php");
+$name=$_POST['name'];
 $email=$_POST['user_name'];
-$pwd=$_POST['pwd'];
 $age=$_POST['age'];
-$place=$_POST['place'];
-$gender=$_POST['gender'];
-session_start();
-	$query=mysqli_query($con,"INSERT INTO user(email,pwd,age,pin,gender) VALUES ('$email','$pwd',$age,$place,'$gender')");
+$pwd=$_POST['pwd'];
+$repwd=$_POST['repwd'];
+if($pwd==$repwd)
+{
+	session_start();
+	$query=mysqli_query($con,"INSERT INTO user(name,email,age,pwd) VALUES ('$name','$email','$age','$pwd')");
 	$_SESSION['username']=$email;
 	session_write_close ();
-header("Location: test.php");
+	header("Location: home.php");
+}
+else
+echo "Password mismatch";
 ?>

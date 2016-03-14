@@ -4,7 +4,7 @@ echo "<div class='container'><div class='row'>";
 session_start();
 	if(!isset($_SESSION['username']))
 		{
-		echo "<a href='Login.html'><i class='glyphicon glyphicon-earphone'></i>Login</a>&nbsp|&nbsp<a href='Register.html'>Register</a>";
+		// "<a href='Login.html'><i class='glyphicon glyphicon-earphone'></i>Login</a>&nbsp|&nbsp<a href='Register.html'>Register</a>";
 		}
 		else
 		{

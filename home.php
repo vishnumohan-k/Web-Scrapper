@@ -2,5 +2,6 @@
 include 'head.html';
 include 'isRegisterd.php';
 include 'nav.html';
-echo 'Php Works';
+include 'slider.html';
+//echo 'Php Works';
 ?>
