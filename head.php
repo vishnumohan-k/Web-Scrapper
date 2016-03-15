@@ -22,39 +22,35 @@
     <!--script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script-->
 </head>
 <body>
-
   <div id="header">
-        <div class="header_content">
-      
-            <div class="logo"><a href="home.php">Easy Shopper</a> <span>| Smartest Way of Shopping...</span></div>
-        
+    <div class="header_content">
+      <div class="logo"><a href="home.php">Easy Shopper</a> <span>.</span></div>
         <div class="menu">
-            <ul>
-                <li class="selected"><a href="home.php">Home</a></li>
-                <li><a href="#Contactus">Contact Us</a></li>
-<?php
-session_start();
-  if(!isset($_SESSION['username']))
-    {
-     "<li><a href='ToLogin.php'>Login</a></li><li><a href='ToRegister.php'>Register</a></li>";
-    }
-    else
-    {
-    echo "<strong>Welcome </strong>";
-    echo "<a href='Account.php'>";
-    echo "<strong>".$_SESSION['username']."</strong>";
+          <ul>
+            <li class="selected"><a href="home.php">Home</a></li>
+            <li><a href="#Contactus">Contact Us</a></li>
+            <?php
+            session_start();
+            if(!isset($_SESSION['username']))
+              {
+               echo "<li><a href='ToLogin.php'>Login</a></li><li><a href='ToRegister.php'>Register</a></li>";
+              }
+            else
+              {
+                echo "<strong>Welcome </strong>";
+                echo "<a href='Account.php'>";
+                echo "<strong>".$_SESSION['username']."</strong>";
     //echo "&nbsp|&nbsp</a><a href='Wishlist.html'>Wishlist</a>&nbsp|&nbsp";
     //echo "&nbsp <a href='Logout.php' style='text-decoration:none'><i class='glyphicon glyphicon-off'></i> Log out</a>";
-    }
-  session_write_close ();
-?>
-                <li><a href="ToRegister.php">Register</a></li>
-                <li><a href="ToLogin.php">Login</a></li>    
-            </ul>
-         </div>
-         
-        </div> 
+              }
+            session_write_close ();
+            ?>   
+          </ul>
+        </div>
+      </div>
+    </div>
   </div><!-- End of Header-->
+<hr>
 
   
 
