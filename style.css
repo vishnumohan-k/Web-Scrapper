@@ -70,9 +70,9 @@ html[xmlns] .slides {display: block;}
 .flex-control-nav li a {width: 13px; height: 13px; display: block; cursor: pointer; text-indent: -9999px;}
 .flex-control-nav li a:hover {background-position: 0 -13px;}
 .flex-control-nav li a.active {background-position: 0 -26px; cursor: default;}
-.flex-caption{ position: absolute;left:0px; top:150px; width:920px;font-family: 'Source Sans Pro', sans-serif;text-align:center; font-size:14px; color:#FFFFFF;}
-.flex-caption h2{ font-size:30px; color:#FFFFFF;} 
-.flex-caption p{ text-align:center; padding:0 200px;}
+.flex-caption{ position: absolute;left:0px; top:150px; width:920px;font-family: 'Source Sans Pro', sans-serif;text-align:center; font-size:14px; color:#145214;}
+.flex-caption h2{ font-size:30px; color: #000000;} 
+.flex-caption p{ text-align:center; padding:0 200px;font-size: 20px;}
 a.slider_button{border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;-khtml-border-radius:5px;background-color:#f98740; color:#fff; font-size:14px; padding:8px 12px; margin:20px 0 0 0; display:inline-block;}
 
 /* STRUCTURE */
