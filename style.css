@@ -145,7 +145,7 @@ ul.footer_menu li a{ background:url(images/bullet.png) no-repeat left; padding:0
 
 .top_slogan{ text-align:center;font-family: 'Source Sans Pro', sans-serif; color:#CCCCCC; font-size:18px; padding:20px; font-style:italic; line-height:22px; clear:both;}
 
-.footer_content{margin:auto;width:100%;}
+.footer_content{margin:0 auto;width:100%;}
 .footer_left{ float:left; padding:0 0 0 10px;}
 .footer_right{ float:right; padding:0 10px 0 0;}
 }
