@@ -10,12 +10,12 @@ $rslt=mysqli_query($con,$query);
    } 
    while($row=mysqli_fetch_row($rslt)) 
    {
-	   			session_start();
-				$_SESSION['username']=$_POST['email'];
-				//$_SESSION['user_id']=$row[0];
-				session_write_close ();
+               session_start();
+            $_SESSION['username']=$_POST['email'];
+            //$_SESSION['user_id']=$row[0];
+            session_write_close ();
             header("Location: UserLogin.php");
-	}  
+   }  
 mysqli_close($con);
 //header("Location: home.php");
 ?>

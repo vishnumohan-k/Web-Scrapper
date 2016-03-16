@@ -1,4 +1,5 @@
 <?php
-include 'isRegisterd.php';
-include 'user.html';
+//include 'isRegisterd.php';
+//include 'user.html';
+include 'userPage.php';
 ?>

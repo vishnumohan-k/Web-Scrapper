@@ -8,6 +8,27 @@
     <!----script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script-->
     <!--script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script-->
 </head>
+<?php
+echo "<div class='container'><div class='row'>";
+
+session_start();
+    if(!isset($_SESSION['username']))
+        {
+            header("Location: ToLogin.php");
+         //"<a href='Login.html'><i class='glyphicon glyphicon-earphone'></i>Login</a>&nbsp|&nbsp<a href='Register.html'>Register</a>";
+        }
+        else
+        {
+        echo "<strong>Welcome </strong>";
+        echo "<a href='userPage.php'>";
+        echo "<strong>".$_SESSION['username']."</strong>";
+        //echo "&nbsp|&nbsp</a><a href='Wishlist.html'>Wishlist</a>&nbsp|&nbsp";
+        //echo "&nbsp <a href='Logout.php' style='text-decoration:none'><i class='glyphicon glyphicon-off'></i> Log out</a>";
+        }
+    session_write_close ();
+
+echo "</div></div>";
+?>
 <div class="container">
         <div class="row"><!--navigation-->
             <nav class="navbar navbar-inverse">
@@ -21,6 +42,7 @@
                     <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="home.php">Easy Shopper</a>
+                    
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
             
@@ -51,6 +73,7 @@
                         </div>
                         <button type="submit" class="btn btn-default">Search</button>
                 </form>
+                 
       <ul class="nav navbar-nav navbar-right">
         <li><a href="Logout.php" style='text-decoration:none'><i class='glyphicon glyphicon-off'></i> Logout</a></li>
       </ul>
@@ -60,7 +83,5 @@
         </div>
 
     </div><!--navigation-->
-    <div>
-        
-    </div>
+    
 
