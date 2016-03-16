@@ -8,27 +8,7 @@
     <!----script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script-->
     <!--script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script-->
 </head>
-<?php
-echo "<div class='container'><div class='row'>";
 
-session_start();
-    if(!isset($_SESSION['username']))
-        {
-            header("Location: ToLogin.php");
-         //"<a href='Login.html'><i class='glyphicon glyphicon-earphone'></i>Login</a>&nbsp|&nbsp<a href='Register.html'>Register</a>";
-        }
-        else
-        {
-        echo "<strong>Welcome </strong>";
-        echo "<a href='userPage.php'>";
-        echo "<strong>".$_SESSION['username']."</strong>";
-        //echo "&nbsp|&nbsp</a><a href='Wishlist.html'>Wishlist</a>&nbsp|&nbsp";
-        //echo "&nbsp <a href='Logout.php' style='text-decoration:none'><i class='glyphicon glyphicon-off'></i> Log out</a>";
-        }
-    session_write_close ();
-
-echo "</div></div>";
-?>
 <div class="container">
         <div class="row"><!--navigation-->
             <nav class="navbar navbar-inverse">
@@ -44,28 +24,15 @@ echo "</div></div>";
                     <a class="navbar-brand" href="home.php">Easy Shopper</a>
                     
                 </div>
+
                 <!-- Collect the nav links, forms, and other content for toggling -->
             
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
                     <ul class="nav navbar-nav">
-                    <li><a href="viewcart.php"><i class="glyphicon glyphicon-shopping-cart"></i> WishList</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="Category.php?category=1">Electronics</a></li>
-                    <li><a href="Category.php?category=2">Home Appliences</a></li>
-                    <li><a href="Category.php?category=3">Books</a></li>
-                    <li><a href="Category.php?category=4">Computers</a></li>
-                    <li><a href="Category.php?category=5">Computer Accesories</a></li>
-                    <li><a href="Category.php?category=6">Cameras,Audio & Video</a></li>
-                    <li><a href="Category.php?category=7">Mobile & Tablets</a></li>
-                    <li><a href="Category.php?category=8">Sports & Fitness</a></li>
-                    <li><a href="Category.php?category=9">Jwellery , Watches & eyewear</a></li>
-                    <li><a href="Category.php?category=10">Shoes</a></li>
-                    <li><a href="Category.php?category=11">Clothing</a></li>
-                    <li><a href="Category.php?category=12">Handbags & Luggage</a></li><li><a href="Category.php?category=13">Beauty,Health & Gourmet</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="Wishlist.php"><i class="glyphicon glyphicon-shopping-cart"></i> WishList</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-plus-sign"></i> Add URL</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-globe"></i> Notifications</a></li>
                     </ul>
                     <form method="POST" action="search.php" class="navbar-form navbar-left" role="search">
                         <div class="form-group">
@@ -73,8 +40,23 @@ echo "</div></div>";
                         </div>
                         <button type="submit" class="btn btn-default">Search</button>
                 </form>
-                 
+   
       <ul class="nav navbar-nav navbar-right">
+        <li>
+            <?php
+            session_start();
+            if(!isset($_SESSION['username']))
+            {
+                header("Location: ToLogin.php");
+            }
+            else
+            {
+                echo "<a href='userPage.php' style='text-decoration:none'>";
+                echo "<strong>".$_SESSION['username']."</strong></a>";
+            }
+            session_write_close ();
+            ?>
+        </li>
         <li><a href="Logout.php" style='text-decoration:none'><i class='glyphicon glyphicon-off'></i> Logout</a></li>
       </ul>
              </div><!-- /.navbar-collapse -->

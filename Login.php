@@ -14,7 +14,7 @@ $rslt=mysqli_query($con,$query);
             $_SESSION['username']=$_POST['email'];
             //$_SESSION['user_id']=$row[0];
             session_write_close ();
-            header("Location: UserLogin.php");
+            header("Location: userPage.php");
    }  
 mysqli_close($con);
 //header("Location: home.php");
