@@ -9,4 +9,35 @@
 | pwd     | varchar(25)     | NO   |     | NULL    |                |
 +---------+-----------------+------+-----+---------+----------------+
 
-2.
+2.REGX
+-------
+
+CREATE TABLE REGX(regx_id int(6) UNSIGNED NOT NULL AUTO_INCREMENT,  host VARCHAR(50) NOT NULL, regx VARCHAR(150) NOT NULL, description VARCHAR(25) NOT NULL, PRIMARY KEY(host , description ), UNIQUE KEY(regx_id) );
+
++-------------+-----------------+------+-----+---------+----------------+
+| Field       | Type            | Null | Key | Default | Extra          |
++-------------+-----------------+------+-----+---------+----------------+
+| regx_id     | int(6) unsigned | NO   | UNI | NULL    | auto_increment |
+| host        | varchar(50)     | NO   | PRI | NULL    |                |
+| regx        | varchar(150)    | NO   |     | NULL    |                |
+| description | varchar(25)     | NO   | PRI | NULL    |                |
++-------------+-----------------+------+-----+---------+----------------+
+
+3.URL
+------
+
+CREATE TABLE URL (url_id int(6) UNSIGNED NOT NULL AUTO_INCREMENT, url VARCHAR(200) NOT NULL, title VARCHAR(200) NOT NULL, regx_id_url int(6) UNSIGNED NOT NULL, notif_value  numeric(15,2) NOT NULL, notify_greater int(1) NOT NULL , notify_now int(1) NOT NULL , current_value numeric(15,2),      PRIMARY KEY(url_id),     CONSTRAINT regulerXpression FOREIGN KEY (regx_id_url) REFERENCES REGX(regx_id) );
+
++----------------+-----------------+------+-----+---------+----------------+
+| Field          | Type            | Null | Key | Default | Extra          |
++----------------+-----------------+------+-----+---------+----------------+
+| url_id         | int(6) unsigned | NO   | PRI | NULL    | auto_increment |
+| url            | varchar(200)    | NO   |     | NULL    |                |
+| title          | varchar(200)    | NO   |     | NULL    |                |
+| regx_id_url    | int(6) unsigned | NO   | MUL | NULL    |                |
+| notif_value    | decimal(15,2)   | NO   |     | NULL    |                |
+| notify_greater | int(1)          | NO   |     | NULL    |                |
+| notify_now     | int(1)          | NO   |     | NULL    |                |
+| current_value  | decimal(15,2)   | YES  |     | NULL    |                |
++----------------+-----------------+------+-----+---------+----------------+
+
