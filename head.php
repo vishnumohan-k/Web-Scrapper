@@ -4,6 +4,9 @@
       <script src="jquery-1.12.0.min.js"></script>
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" media="all" href="style.css" />
+      <link rel="stylesheet" href="prettyphoto/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+      <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
       <script src="js/bootstrap.min.js"></script>
       <link rel="stylesheet" href="prettyphoto/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
@@ -24,7 +27,7 @@
 <body>
   <div id="header">
     <div class="header_content">
-      <div class="logo"><a href="home.php">Easy Shopper</a> <span>.</span></div>
+      <div class="logo"><a href="home.php">Easy Shopper</a> <span>| Smartest Way of Shopping...</span></div>
         <div class="menu">
           <ul>
             <li class="selected"><a href="home.php">Home</a></li>
