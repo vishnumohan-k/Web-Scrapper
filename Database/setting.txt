@@ -12,16 +12,18 @@
 2.REGX
 -------
 
-CREATE TABLE REGX(regx_id int(6) UNSIGNED NOT NULL AUTO_INCREMENT,  host VARCHAR(50) NOT NULL, regx VARCHAR(150) NOT NULL, description VARCHAR(25) NOT NULL, PRIMARY KEY(host , description ), UNIQUE KEY(regx_id) );
+CREATE TABLE REGX(regx_id int(6) UNSIGNED NOT NULL AUTO_INCREMENT,  host VARCHAR(50) NOT NULL, title_regx VARCHAR(150) NOT NULL, value_regx VARCHAR(150) NOT NULL,description VARCHAR(25) NOT NULL, PRIMARY KEY(host ), UNIQUE KEY(regx_id) );
 
 +-------------+-----------------+------+-----+---------+----------------+
 | Field       | Type            | Null | Key | Default | Extra          |
 +-------------+-----------------+------+-----+---------+----------------+
 | regx_id     | int(6) unsigned | NO   | UNI | NULL    | auto_increment |
 | host        | varchar(50)     | NO   | PRI | NULL    |                |
-| regx        | varchar(150)    | NO   |     | NULL    |                |
-| description | varchar(25)     | NO   | PRI | NULL    |                |
+| title_regx  | varchar(150)    | NO   |     | NULL    |                |
+| value_regx  | varchar(150)    | NO   |     | NULL    |                |
+| description | varchar(25)     | NO   |     | NULL    |                |
 +-------------+-----------------+------+-----+---------+----------------+
+
 
 3.URL
 ------
