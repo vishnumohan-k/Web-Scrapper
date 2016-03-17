@@ -12,6 +12,7 @@ function Show_txtbox(obj1,obj2)
  document.getElementById(obj1).style.display="";
  document.getElementById(obj2).style.display="none";
  document.getElementById("dis").style.display="none";
+ document.getElementById("link").style.display="none";
 }
 
 </script>
@@ -31,7 +32,7 @@ function Show_txtbox(obj1,obj2)
                 <i class="glyphicon glyphicon-scissors form-control-feedback"></i>
                 </div>
                 <div class="form-group has-feedback">
-                    <input type="number" name="range" style="font-size: 15px;font-weight: bold;" class="form-control" id="range" placeholder="Enter Your Price Range">
+                    <input type="number" name="range" style="font-size: 15px;font-weight: bold;" class="form-control" id="range" placeholder="Enter Your Price Range" required>
                     <i class="glyphicon glyphicon-euro form-control-feedback"></i>
                 </div>
                 <div class="form-group has-feedback text-center">
@@ -74,8 +75,8 @@ function Show_txtbox(obj1,obj2)
                     </select>
                 </div>
                 <div class="form-group has-feedback text-center"> 
-                <a href="addNewProduct.php" style="margin-left: 200px" onclick="javascript:Show_txtbox('AddCatagory','cat');"><i class="glyphicon glyphicon-plus-sign"></i> Add New</a>
-                    <input type="text" style="display: none;margin-left: 100px;width: 165px;font-size:15px;font-weight: bold;"  id="AddCatagory" class="form-control"  placeholder="Catagory Name" >
+                <a href="#" style="margin-left: 200px" id="link" onclick="javascript:Show_txtbox('AddCatagory','cat');"><i class="glyphicon glyphicon-plus-sign"></i> Add New</a>
+                    <input type="text" name="NewCatagory" style="display: none;font-size:15px;font-weight: bold;"  id="AddCatagory" class="form-control"  placeholder="New Catagory Name" required>
                     </input>
                 </div>
                 <br/>

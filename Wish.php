@@ -9,7 +9,7 @@
                 <br/>
                 <div class="form-group has-feedback text-center">
                 <label><h4>Choose Your Catagory</h4></label>
-                    <select class="form-control" name="" style="width: 210px;margin-left: 30px;font-size: 16px;display: inline-block; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);font-weight: bold; ">
+                    <select class="form-control" name="" style="width: 225px;margin-left: 30px;font-size: 16px;display: inline-block; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);font-weight: bold; ">
                     <option disabled selected value> -- select an option -- </option>
                     <?php
                     include 'dbconnect.php';
