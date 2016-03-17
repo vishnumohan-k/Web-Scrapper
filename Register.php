@@ -11,7 +11,7 @@ if($pwd==$repwd)
 	$query=mysqli_query($con,"INSERT INTO user(name,email,age,pwd) VALUES ('$name','$email','$age','$pwd')");
 	$_SESSION['username']=$email;
 	session_write_close ();
-	header("Location: home.php");
+	header("Location: USER.php");
 }
 else
 echo "Password mismatch";

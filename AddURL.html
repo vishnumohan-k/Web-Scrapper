@@ -4,11 +4,13 @@
 <script language="JavaScript" type="text/javascript">
 <!--
 
-function tb(obj){
- document.getElementById(obj).innerHTML="";
+function Show_txtbox(obj1,obj2)
+{
+ document.getElementById(obj1).style.display="";
+ document.getElementById(obj2).style.display="none";
+ document.getElementById("dis").style.display="none";
 }
 
-//-->
 </script>
 
 </head>
@@ -22,16 +24,17 @@ function tb(obj){
                  <h2 class="text-center">Add Your Product</h2>
                 <br/>
                 <div class="form-group has-feedback text-center">
-                <input type="text" name="URL" class="form-control" id="url" placeholder="Copy & Paste Your URL here.." autofocus>
+                <input type="text" name="URL" style="font-size: 15px;font-weight: bold;" class="form-control" id="url" placeholder="Copy & Paste Your URL here.." autofocus required>
                 <i class="glyphicon glyphicon-scissors form-control-feedback"></i>
                 </div>
                 <div class="form-group has-feedback">
-                    <input type="text" name="range" class="form-control" id="range" placeholder="Enter Your Price Range">
+                    <input type="number" name="range" style="font-size: 15px;font-weight: bold;" class="form-control" id="range" placeholder="Enter Your Price Range">
                     <i class="glyphicon glyphicon-euro form-control-feedback"></i>
                 </div>
                 <div class="form-group has-feedback text-center">
-                    <label><h4>Choose Your Catagory</h4></label>
-                    <select name="cars">
+                    <label id="dis"><h4>Choose Your Catagory</h4></label>
+                    <select id ="cat" class="form-control" name="" style="width: 250px;margin-left: 50px;font-size: 15px;font-weight: bold;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); ">
+                    <option disabled selected value> -- select an option -- </option>
                     <option value="">Electronics</option>
                     <option value="">Home Appliences</option>
                     <option value="">Books</option>
@@ -43,20 +46,14 @@ function tb(obj){
                     </select>
                 </div>
                 <div class="form-group has-feedback text-center"> 
-                <a href="#" style="margin-left: 200px" onclick="javascript:tb('cat');"><i class="glyphicon glyphicon-plus-sign"></i> Add New</a>
-                <div id="cat">
-                    
-                </div>
-                </li>
-                <!--<div id="test1"><a href="javascript:show_textbox()">Open</a></div>
-                <span onclick="javascript:tb('TB1','Text One');" >Link One</span><br>
-                <span onclick="javascript:tb('TB1','Text Two');" >Link Two</span><br>
-                <span onclick="javascript:tb('TB1','Text Three');" >Link Three</span><br>-->
+                <a href="#" style="margin-left: 200px" onclick="javascript:Show_txtbox('AddCatagory','cat');"><i class="glyphicon glyphicon-plus-sign"></i> Add New</a>
+                    <input type="text" style="display: none;margin-left: 100px;width: 165px;font-size:15px;font-weight: bold;"  id="AddCatagory" class="form-control"  placeholder="Catagory Name" >
+                    </input>
                 </div>
                 <br/>
                 <div class="align-center" style="text-align:center">
                     <button type="submit" name="register" class="btn btn-default" id="login">Add to WishList</button>&nbsp;&nbsp;&nbsp;
-                    <button type="submit" name="cancel" class="btn btn-default" id="login">Clear</button>
+                    <button type="reset" name="cancel" class="btn btn-default" id="reset">Cancel</button>
                 </div>
             </form>
         </div>
