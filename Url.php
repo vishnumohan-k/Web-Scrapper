@@ -42,7 +42,30 @@ class URL
 
     public function scrape()
         {
-            
+            $this->url ="http://www.amazon.ca/gp/product/B00SGS7ZH4/ref=s9_acss_bw_hsb_LaptopsS_s2_n?pf_rd_m=A3DWYIK6Y9EEQB&pf_rd_s=merchandised-search-2&pf_rd_r=1S72BA42K5E9DADAAC62&pf_rd_t=101&pf_rd_p=2253690442&pf_rd_i=677252011";
+            $this->regx='/<span id="priceblock_ourprice" class=".*?">(.*?)<\/span>/s';
+            $html=file_get_contents($this->url);
+            preg_match_all($this->regx,
+                $html,
+                $posts, // will contain the article data
+                PREG_SET_ORDER // formats data into an array of posts
+                );
+            $this->regx='/<span id="productTitle" class=".*?">(.*?)<\/span>/s';
+            preg_match_all($this->regx,
+                $html,
+                $title,
+                PREG_SET_ORDER
+                );
+            $date = date('Y/m/d H:i:s');
+            echo $date."<br>";
+            echo $title[0][0]."   :   ";
+            echo "<br>";
+            $temp1 =  $posts[0][0];
+            $temp1 = preg_replace('/[^0-9\.]/', '',$temp1);
+            echo $temp1; 
+            echo "<br>";
+            $this->current_value =  floatval($temp1);
+            echo $this->current_value ;           
         }
 
 }
