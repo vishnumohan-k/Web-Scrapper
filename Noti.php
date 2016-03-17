@@ -10,9 +10,12 @@
     <div class="row" >
         <div style="width:1000px; margin:0 auto; border: thin solid grey; border-radius: 25px;padding: 20px;">
           <form method="POST" action="">
-                 
+            <div class="form-group has-feedback text-center">
+                    <label id="dis"><h1>Notifications</h1></label>   
+            </div>  
             </form>
             <?php
+
                     include 'dbconnect.php';
                     session_start();
                     $query="select user_id from user where email = '".$_SESSION['username']."'";
@@ -28,30 +31,58 @@
                         
                         $user=$row[0];
                     }    
-                    echo "user id:".$user;      
+                   // echo "user id:".$user;      
                     $query="select wishlist_id from wishlist where user_id_wishlist = '".$user."'";
                     $rslt=mysqli_query($con,$query);  
                     if(! $rslt ) 
                     {
                         die('Could not get data: ' . mysql_error());
                     }     
-                    echo "<br>wishlist ids are:<br>";
+                    //echo "<br>wishlist ids are:<br>";
                     while($row=mysqli_fetch_row($rslt)) 
                     {
-                        
-                        echo $row[0]."<br>";
-                    }
-                    $query="select url_id from Wish_Url where wishlist_id = '".$row[0]."'";
-                    $rslt=mysqli_query($con,$query);  
-                    if(! $rslt ) 
-                    {
-                        die('Could not get data: ' . mysql_error());
-                    }     
+                        $query1="select url_id from Wish_Url where wishlist_id = '".$row[0]."'";
+                        $rslt1=mysqli_query($con,$query1);  
+                        if(! $rslt1 ) 
+                        {
+                            die('Could not get data: ' . mysql_error());
+                        }     
                    
-                    while($row1=mysqli_fetch_row($rslt)) 
-                    {
-                        
-                        echo $row1[0]."<br>";
+                        while($row1=mysqli_fetch_row($rslt1)) 
+                        { 
+                            //echo $row1[0]."<br>";
+                            $query1="select url_id from Wish_Url where wishlist_id = '".$row[0]."'";
+                            $rslt1=mysqli_query($con,$query1);  
+                            if(! $rslt1 ) 
+                            {
+                                die('Could not get data: ' . mysql_error());
+                            }     
+                                /*echo"<table border='1' align='center' width='800px'>
+                                <tr>
+                                <th>Product Name</th>
+                                <th>Price</th>
+                                <th>URL</th></tr>";
+                                echo "</table>";*/
+                            while($row1=mysqli_fetch_row($rslt1)) 
+                            { 
+                                //echo $row1[0]."<br>";
+                                $query2="select url,title,current_value from URL where url_id = '".$row1[0]."'";
+                                $rslt2=mysqli_query($con,$query2);
+
+                                while($row2=mysqli_fetch_array($rslt2))
+                                {
+                                    //echo $row2['url'];
+                                    echo "<table border='1' align='center' width='800px'>";
+                                    echo"<tr>";
+                                    echo"<td>".$row2['title']."</td>";
+                                    echo"<td>".$row2['current_value']."</td>";
+                                    echo"<td><a href='";echo $row2['url'];echo "'>."."GoToPage"."</a></td>";
+                                    echo "</tr>";
+                                }
+                                echo "</table>";
+                                
+                            }
+                        }
                     }
                     //echo $row[0];
             ?>
