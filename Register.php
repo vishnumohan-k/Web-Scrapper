@@ -13,6 +13,4 @@ if($pwd==$repwd)
 	session_write_close ();
 	header("Location: USER.php");
 }
-else
-echo "Password mismatch";
 ?>
