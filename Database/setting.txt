@@ -43,3 +43,14 @@ CREATE TABLE URL (url_id int(6) UNSIGNED NOT NULL AUTO_INCREMENT, url VARCHAR(20
 | current_value  | decimal(15,2)   | YES  |     | NULL    |                |
 +----------------+-----------------+------+-----+---------+----------------+
 
+4.wishlist
+-----------
+CREATE TABLE wishlist(wishlist_id int(6) UNSIGNED NOT NULL AUTO_INCREMENT,  user_id_wishlist  int(6) UNSIGNED NOT NULL, wishlist_name VARCHAR(50) NOT NULL, PRIMARY KEY(wishlist_id),CONSTRAINT wishlist FOREIGN KEY (user_id_wishlist) REFERENCES user(user_id) );
+
++------------------+-----------------+------+-----+---------+----------------+
+| Field            | Type            | Null | Key | Default | Extra          |
++------------------+-----------------+------+-----+---------+----------------+
+| wishlist_id      | int(6) unsigned | NO   | PRI | NULL    | auto_increment |
+| user_id_wishlist | int(6) unsigned | NO   | MUL | NULL    |                |
+| wishlist_name    | varchar(50)     | NO   |     | NULL    |                |
++------------------+-----------------+------+-----+---------+----------------+
