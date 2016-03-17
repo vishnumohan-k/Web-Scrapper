@@ -3,13 +3,18 @@ class URL
 {   public $url_id;
     public $url;
     public $title;
-    public $regx;
+    public $regx_id;
     public $notif_value;
     public $notif_greater;
     public $notif_now;
     public $current_value;
 
-    function __construct($param) 
+    function __construct()
+        {
+
+        }
+
+ /*   function __construct($param) 
         {
         include "dbconnect.php";
         $this->url_id=$param;
@@ -23,49 +28,76 @@ class URL
                 $this->notif_greater=$row[5];
                 $this->notif_now=$row[6];
                 $this->current_value=$row[7];
-                } 
-            $this->getRegx($temp,$con);
+                }                                                                                       
+            $this->getRegx(1,$con);
         mysqli_close($con);
         }
-
+        */
+    public function insertion($url,$notify)
+        {
+            include "dbconnect.php";
+            $this->url = $url ;
+            $this->notif_value = $notify ;
+            $this->notif_greater = 0 ;
+            $this->getRegx($con);
+        }
     public function printWish()
         {
-            echo $this->url_id;
+            echo $this->url;
             echo "<br>";
-            echo $this->regx;
+            echo $this->title;
+            echo "<br>";
+            echo $this->regx_id;
+            echo "<br>";
+            echo $this->notif_value;
+            echo "<br>";
+            echo $this->notif_greater;
+            echo "<br>";
+            echo $this->notif_now;
+            echo "<br>";
+            echo $this->current_value;
         }
 
-    public function getRegx($param,$con)
+    public function getRegx($con)
         {
-            $this->regx="select regx from REGX where regx_id = param";
+            $domain = parse_url ($this->url , PHP_URL_HOST);
+            $query="select regx_id,title_regx,value_regx from REGX where host = '".$domain."' ";
+            $rslt=mysqli_query($con,$query);
+           while($row=mysqli_fetch_row($rslt)) {
+                $this->regx_id = $row[0];
+                $title1=$row[1];
+                $price=$row[2];
+                $this->scrape($title1 , $price);
+                } 
+
         }
 
-    public function scrape()
+    public function scrape($title1 , $price)
         {
-            $this->url ="http://www.amazon.ca/gp/product/B00SGS7ZH4/ref=s9_acss_bw_hsb_LaptopsS_s2_n?pf_rd_m=A3DWYIK6Y9EEQB&pf_rd_s=merchandised-search-2&pf_rd_r=1S72BA42K5E9DADAAC62&pf_rd_t=101&pf_rd_p=2253690442&pf_rd_i=677252011";
-            $this->regx='/<span id="priceblock_ourprice" class=".*?">(.*?)<\/span>/s';
             $html=file_get_contents($this->url);
-            preg_match_all($this->regx,
-                $html,
-                $posts, // will contain the article data
-                PREG_SET_ORDER // formats data into an array of posts
-                );
-            $this->regx='/<span id="productTitle" class=".*?">(.*?)<\/span>/s';
-            preg_match_all($this->regx,
+            preg_match_all($title1,
                 $html,
                 $title,
                 PREG_SET_ORDER
                 );
+            preg_match_all($price,
+                $html,
+                $posts, // will contain the article data
+                PREG_SET_ORDER // formats data into an array of posts
+                );
             $date = date('Y/m/d H:i:s');
-            echo $date."<br>";
-            echo $title[0][0]."   :   ";
-            echo "<br>";
+            $this->title = $title[0][0];
             $temp1 =  $posts[0][0];
             $temp1 = preg_replace('/[^0-9\.]/', '',$temp1);
-            echo $temp1; 
-            echo "<br>";
             $this->current_value =  floatval($temp1);
-            echo $this->current_value ;           
+            if ( $this->notif_value < $this->current_value )
+            {
+                $this->notif_now = 0;
+            }
+            else
+            {
+                 $this->notif_now = 1;               
+            }
         }
 
 }
