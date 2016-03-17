@@ -1,4 +1,18 @@
 <html>
+<head>
+  <title></title>
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function tb(obj){
+ document.getElementById(obj).innerHTML="";
+}
+
+//-->
+</script>
+
+</head>
+
         <body>
         <br><hr>
     <div class="container" >
@@ -29,8 +43,15 @@
                     </select>
                 </div>
                 <div class="form-group has-feedback text-center"> 
-                    <button type="submit" name="addCatagory" class="btn btn-default form-control" id="addCatagory">
-                    <i class="glyphicon glyphicon-plus-sign form-control-feedback"></i>Add New</button>
+                <a href="#" style="margin-left: 200px" onclick="javascript:tb('cat');"><i class="glyphicon glyphicon-plus-sign"></i> Add New</a>
+                <div id="cat">
+                    
+                </div>
+                </li>
+                <!--<div id="test1"><a href="javascript:show_textbox()">Open</a></div>
+                <span onclick="javascript:tb('TB1','Text One');" >Link One</span><br>
+                <span onclick="javascript:tb('TB1','Text Two');" >Link Two</span><br>
+                <span onclick="javascript:tb('TB1','Text Three');" >Link Three</span><br>-->
                 </div>
                 <br/>
                 <div class="align-center" style="text-align:center">
@@ -42,4 +63,5 @@
     </div><!--login form-->
     </div>
     </body>
+    </head>
 </html>
