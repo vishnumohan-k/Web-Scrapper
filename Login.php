@@ -8,6 +8,7 @@ $rslt=mysqli_query($con,$query);
       //header("Location: ToLogin.php");
 
    } 
+   $f=0;
    while($row=mysqli_fetch_row($rslt)) 
    {
                session_start();
@@ -15,7 +16,10 @@ $rslt=mysqli_query($con,$query);
             //$_SESSION['user_id']=$row[0];
             session_write_close ();
             header("Location: USER.php");
+            $f=1;
    }  
+
 mysqli_close($con);
-//header("Location: home.php");
+if($f==0)
+header("Location: ToLogin.php");
 ?>
