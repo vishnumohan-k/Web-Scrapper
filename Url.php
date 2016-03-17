@@ -41,6 +41,7 @@ class URL
             $this->notif_greater = 0 ;
             $this->getRegx($con);
             $this->enterDB($con);
+            return $this->url_id;
         }
     public function printWish()
         {
@@ -105,6 +106,11 @@ class URL
         {
             $query="INSERT INTO URL(url,title,regx_id_url,notif_value,notify_greater,notify_now,current_value) VALUES ('".$this->url."','".$this->title."',".$this->regx_id.",".$this->notif_value.",".$this->notif_greater.",".$this->notif_now.",".$this->current_value.") ";
             $rslt=mysqli_query($con,$query);
+            $query="SELECT url_id FROM URL WHERE url = '".$this->url."'";
+            $rslt=mysqli_query($con,$query);
+            while($row=mysqli_fetch_row($rslt)) {
+                $this->url_id= $row[0];
+                } 
         }
 
 }
