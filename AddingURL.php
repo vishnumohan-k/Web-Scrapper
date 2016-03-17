@@ -1,5 +1,4 @@
 <?php
 include 'userPage.php';
-include 'AddURL.html';
-
+include 'AddURL.php';
 ?>
