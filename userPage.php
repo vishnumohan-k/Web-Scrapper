@@ -32,7 +32,7 @@
                     <ul class="nav navbar-nav">
                     <li><a href="Wishlist.php"><i class="glyphicon glyphicon-shopping-cart"></i> WishList</a></li>
                     <li><a href="AddingURL.php"><i class="glyphicon glyphicon-plus-sign"></i> Add URL</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-globe"></i> Notifications</a></li>
+                    <li><a href="Notification.php"><i class="glyphicon glyphicon-globe"></i> Notifications</a></li>
                     </ul>
                     <form method="POST" action="search.php" class="navbar-form navbar-left" role="search">
                         <div class="form-group">

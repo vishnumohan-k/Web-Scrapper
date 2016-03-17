@@ -1,5 +1,5 @@
 <?php
 include 'userPage.php';
-include 'addNewProduct.html';
+include 'Noti.php';
 
 ?>

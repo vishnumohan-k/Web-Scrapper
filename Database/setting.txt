@@ -55,3 +55,15 @@ CREATE TABLE wishlist(wishlist_id int(6) UNSIGNED NOT NULL AUTO_INCREMENT,  user
 | user_id_wishlist | int(6) unsigned | NO   | MUL | NULL    |                |
 | wishlist_name    | varchar(50)     | NO   |     | NULL    |                |
 +------------------+-----------------+------+-----+---------+----------------+
+
+
+5.Wish_Url
+-----------
+CREATE TABLE Wish_Url ( wishlist_id int(6) UNSIGNED NOT NULL, url_id int(6) UNSIGNED NOT NULL, PRIMARY KEY(wishlist_id,url_id), CONSTRAINT connection FOREIGN KEY (wishlist_id) REFERENCES wishlist(wishlist_id),FOREIGN KEY (url_id) REFERENCES URL(url_id));
+
++-------------+-----------------+------+-----+---------+-------+
+| Field       | Type            | Null | Key | Default | Extra |
++-------------+-----------------+------+-----+---------+-------+
+| wishlist_id | int(6) unsigned | NO   | PRI | NULL    |       |
+| url_id      | int(6) unsigned | NO   | PRI | NULL    |       |
++-------------+-----------------+------+-----+---------+-------+
