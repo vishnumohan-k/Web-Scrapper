@@ -62,12 +62,20 @@ class URL
     public function getRegx($con)
         {
             $domain = parse_url ($this->url , PHP_URL_HOST);
+            echo $domain;
+            echo "<br>";
             $query="select regx_id,title_regx,value_regx from REGX where host = '".$domain."' ";
             $rslt=mysqli_query($con,$query);
            while($row=mysqli_fetch_row($rslt)) {
                 $this->regx_id = $row[0];
+                echo $this->regx_id;
+                echo "<br>";
                 $title1=$row[1];
+                echo $title1;
+                echo "<br>";
                 $price=$row[2];
+                echo $price;
+                echo "<br>";
                 $this->scrape($title1 , $price);
                 } 
 
