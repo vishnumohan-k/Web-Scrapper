@@ -28,10 +28,10 @@ function Show_txtbox(obj1,obj2)
                  <h2 class="text-center">Add Your Product</h2>
                 <br/>
                 <div class="form-group has-feedback text-center">
-                <input type="text" name="URL" style="font-size: 15px;font-weight: bold;" class="form-control" id="url" placeholder="Copy & Paste Your URL here.." autofocus required>
+                <input type="url" name="URL" style="font-size: 15px;font-weight: bold;" class="form-control" id="url" placeholder="Copy & Paste Your URL here.." autofocus required>
                 <i class="glyphicon glyphicon-scissors form-control-feedback"></i>
                 </div>
-                <div class="form-group has-feedback">
+                <div class="form-group has-feedback text-center">
                     <input type="number" name="range" style="font-size: 15px;font-weight: bold;" class="form-control" id="range" placeholder="Enter Your Price Range" required>
                     <i class="glyphicon glyphicon-euro form-control-feedback"></i>
                 </div>
@@ -81,8 +81,8 @@ function Show_txtbox(obj1,obj2)
                 </div>
                 <br/>
                 <div class="align-center" style="text-align:center">
-                    <button type="submit" name="register" class="btn btn-default" id="login">Add to WishList</button>&nbsp;&nbsp;&nbsp;
-                    <button type="reset" name="cancel" class="btn btn-default" id="reset">Cancel</button>
+                    <button type="submit" name="register" class="btn btn-default" id="login" style="font-size: 15px;font-weight: bold;">Add to WishList</button>&nbsp;&nbsp;&nbsp;
+                    <button type="reset" name="cancel" class="btn btn-default" id="reset" style="font-size: 15px;font-weight: bold;">Cancel</button>
                 </div>
             </form>
         </div>

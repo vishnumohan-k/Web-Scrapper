@@ -21,7 +21,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="home.php">Easy Shopper</a>
+                    <a class="navbar-brand" href="USER.php">Easy Shopper</a>
                     
                 </div>
 
