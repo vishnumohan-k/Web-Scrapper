@@ -40,6 +40,7 @@ class URL
             $this->notif_value = $notify ;
             $this->notif_greater = 0 ;
             $this->getRegx($con);
+            $this->enterDB($con);
         }
     public function printWish()
         {
@@ -98,6 +99,12 @@ class URL
             {
                  $this->notif_now = 1;               
             }
+        }
+
+    public function enterDB($con)
+        {
+            $query="INSERT INTO URL(url,title,regx_id_url,notif_value,notify_greater,notify_now,current_value) VALUES ('".$this->url."','".$this->title."',".$this->regx_id.",".$this->notif_value.",".$this->notif_greater.",".$this->notif_now.",".$this->current_value.") ";
+            $rslt=mysqli_query($con,$query);
         }
 
 }
