@@ -76,7 +76,7 @@ function Show_txtbox(obj1,obj2)
                 </div>
                 <div class="form-group has-feedback text-center"> 
                 <a href="#" style="margin-left: 200px" id="link" onclick="javascript:Show_txtbox('AddCatagory','cat');"><i class="glyphicon glyphicon-plus-sign"></i> Add New</a>
-                    <input type="text" name="NewCatagory" style="display: none;font-size:15px;font-weight: bold;"  id="AddCatagory" class="form-control"  placeholder="New Catagory Name" required>
+                    <input type="text" name="NewCatagory" style="display: none;font-size:15px;font-weight: bold;"  id="AddCatagory" class="form-control"  placeholder="New Catagory Name" >
                     </input>
                 </div>
                 <br/>

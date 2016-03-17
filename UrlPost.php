@@ -8,4 +8,9 @@ echo $range."<br>";
 echo $cat."<br>";
 $newCat=$_POST['NewCatagory'];
 echo $newCat;
+if($newCat)
+{
+	echo "New catagory is added";
+}
+
 ?>
