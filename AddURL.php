@@ -9,10 +9,12 @@
 
 function Show_txtbox(obj1,obj2)
 {
+ document.getElementById(obj1).required="true";
  document.getElementById(obj1).style.display="";
  document.getElementById(obj2).style.display="none";
  document.getElementById("dis").style.display="none";
  document.getElementById("link").style.display="none";
+ 
 }
 
 </script>
@@ -23,13 +25,13 @@ function Show_txtbox(obj1,obj2)
         <br><hr>
     <div class="container" >
     <div class="row" >
-        <div style="width:400px; margin:0 auto; border: thin solid grey; border-radius: 25px;padding: 20px;">
+        <div style="width:500px; margin:0 auto; border: thin solid grey; border-radius: 25px;padding: 20px;">
             <form method="POST" action="UrlPost.php">
                  <h2 class="text-center">Add Your Product</h2>
                 <br/>
                 <div class="form-group has-feedback text-center">
                 <input type="url" name="URL" style="font-size: 15px;font-weight: bold;" class="form-control" id="url" placeholder="Copy & Paste Your URL here.." autofocus required>
-                <i class="glyphicon glyphicon-scissors form-control-feedback"></i>
+                <i class="glyphicon glyphicon-scissors form-control-feedback"></i><br>
                 </div>
                 <div class="form-group has-feedback text-center">
                     <input type="number" name="range" style="font-size: 15px;font-weight: bold;" class="form-control" id="range" placeholder="Enter Your Price Range" required>
@@ -37,7 +39,7 @@ function Show_txtbox(obj1,obj2)
                 </div>
                 <div class="form-group has-feedback text-center">
                     <label id="dis"><h4>Choose Your Catagory</h4></label>
-                    <select id ="cat" class="form-control" name="catagory" style="width: 250px;margin-left: 50px;font-size: 15px;font-weight: bold;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); ">
+                    <select id ="cat" class="form-control" name="catagory" style="width: 300px;margin-left: 70px;font-size: 15px;font-weight: bold;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); ">
                     <option disabled selected value> -- select an option -- </option>
                     <?php
                     include 'dbconnect.php';
@@ -76,7 +78,7 @@ function Show_txtbox(obj1,obj2)
                 </div>
                 <div class="form-group has-feedback text-center"> 
                 <a href="#" style="margin-left: 200px" id="link" onclick="javascript:Show_txtbox('AddCatagory','cat');"><i class="glyphicon glyphicon-plus-sign"></i> Add New</a>
-                    <input type="text" name="NewCatagory" style="display: none;font-size:15px;font-weight: bold;"  id="AddCatagory" class="form-control"  placeholder="New Catagory Name" >
+                    <br><input type="text" name="NewCatagory" style="display: none;font-size:15px;font-weight: bold;"  id="AddCatagory" class="form-control"  placeholder="New Catagory Name"  >
                     </input>
                 </div>
                 <br/>
