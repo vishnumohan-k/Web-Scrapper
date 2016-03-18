@@ -15,7 +15,12 @@
             </div>  
             </form>
             <?php
-
+                    echo"<table border='1' align='center' width='800px'>
+                                <tr>
+                                <th><center>Product Name</center></th>
+                                <th><center>Price</center></th>
+                                <th><center>URL</center></th></tr>";
+                                
                     include 'dbconnect.php';
                     session_start();
                     $query="select user_id from user where email = '".$_SESSION['username']."'";
@@ -72,19 +77,22 @@
                                 while($row2=mysqli_fetch_array($rslt2))
                                 {
                                     //echo $row2['url'];
-                                    echo "<table border='1' align='center' width='800px'>";
+                                    
                                     echo"<tr>";
                                     echo"<td>".$row2['title']."</td>";
                                     echo"<td>".$row2['current_value']."</td>";
                                     echo"<td><a href='";echo $row2['url'];echo "'>."."GoToPage"."</a></td>";
                                     echo "</tr>";
                                 }
-                                echo "</table>";
+                                
                                 
                             }
+
                         }
+
                     }
                     //echo $row[0];
+                    echo "</table>";
             ?>
         </div>
     </div><!--login form-->
