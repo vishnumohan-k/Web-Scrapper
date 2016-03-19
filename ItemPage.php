@@ -18,23 +18,38 @@ function Show_div(obj1)
         <br><hr>
     <div class="container" >
     <div class="row" >
-        <div style="width:620px; margin:0 auto; border: thin solid grey; border-radius: 25px;padding: 20px;">
+        <div style="width:100%; margin:0 auto; border: thin solid grey; border-radius: 25px;padding: 20px;">
             <form method="POST" action="">
-                 <h2 class="text-center">Your Product</h2>
+                 <h2 class="text-center"></h2>
                 <br/>
                 <?php
                     $url_id = $_GET['Url_id'];
-                    echo "URL_ID:".$url_id;
+                    //echo "URL_ID:".$url_id;
+                    include 'dbconnect.php';
+                    $query="select url,title,regx_id_url,current_value from URL where url_id = '".$url_id."'";
+                    $rslt=mysqli_query($con,$query);
+                    while($row=mysqli_fetch_array($rslt))
+                    {
+                      echo "<div class='form-group' style='text-align:center'>";
+                      echo "<label id='dis'><h3 class='text-center'> &nbsp; ".$row['title']."</h3></label>";                    
+                      echo "</div>";
+                      echo "<div class='form-group' style='text-align:center'>";
+                      echo "<label id='dis'><h3 class='text-center'>Current Price:&nbsp;".$row['current_value']."</h3></label>";                    
+                      echo "</div>";   
+                      $query1="select host from REGX where regx_id = '".$row['regx_id_url']."'"; 
+                      $rslt1=mysqli_query($con,$query1);  
+                      if(! $rslt1 ) 
+                      {
+                        die('Could not get data: ' . mysql_error());
+                      }   
+                      while($row1=mysqli_fetch_row($rslt1)) 
+                      {  
+                      echo "<div class='form-group' style='text-align:center'>";
+                      echo "<label id='dis'><h3 class='text-center'>Website:&nbsp;".$row1[0]."</h3></label>";                                  
+                      echo "</div>";
+                      }
+                    }
                 ?>
-            <div class="form-group has-feedback text-center">
-                <label id="dis"><h4>Product Name:</h4></label>
-                </div>
-                <div class="form-group has-feedback text-center">
-                     <label id="dis"><h4>Product Name:</h4></label>
-                </div>
-                 <div class="form-group has-feedback text-center">
-                     <label id="dis"><h4>Website:</h4></label>
-                </div>
                              
                 <br/>
                 <div class="align-center" style="text-align:center">
