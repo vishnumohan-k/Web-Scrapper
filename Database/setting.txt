@@ -67,3 +67,17 @@ CREATE TABLE Wish_Url ( wishlist_id int(6) UNSIGNED NOT NULL, url_id int(6) UNSI
 | wishlist_id | int(6) unsigned | NO   | PRI | NULL    |       |
 | url_id      | int(6) unsigned | NO   | PRI | NULL    |       |
 +-------------+-----------------+------+-----+---------+-------+
+
+
+6.URL_history
+-------------
+CREATE TABLE URL_history (url_id_hist int(6) UNSIGNED NOT NULL,price NUMERIC(15,2) , time DATETIME, PRIMARY KEY(url_id_hist , time), CONSTRAINT url_connection FOREIGN KEY (url_id_hist) REFERENCES URL(url_id));
+
++-------------+-----------------+------+-----+---------------------+-------+
+| Field       | Type            | Null | Key | Default             | Extra |
++-------------+-----------------+------+-----+---------------------+-------+
+| url_id_hist | int(6) unsigned | NO   | PRI | NULL                |       |
+| price       | decimal(15,2)   | YES  |     | NULL                |       |
+| time        | datetime        | NO   | PRI | 0000-00-00 00:00:00 |       |
++-------------+-----------------+------+-----+---------------------+-------+
+
