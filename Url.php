@@ -33,6 +33,25 @@ class URL
         mysqli_close($con);
         }
         */
+
+    public function update($param) 
+        {
+        include "dbconnect.php";
+        $this->url_id=$param;
+        $query="select url, notif_value from URL where url_id = ".$this->url_id."";
+        $rslt=mysqli_query($con,$query);
+           while($row=mysqli_fetch_row($rslt)) {
+                $this->url=$row[0];           
+                $this->notif_value=$row[1];
+                $this->notif_greater = 0 ;
+                }                                                                                       
+            $this->getRegx($con);
+            $this->updateDB($con);
+        mysqli_close($con);
+        }
+
+
+
     public function insertion($url,$notify)
         {
             include "dbconnect.php";
@@ -111,6 +130,14 @@ class URL
             while($row=mysqli_fetch_row($rslt)) {
                 $this->url_id= $row[0];
                 } 
+        }
+
+
+    public function updateDB($con)
+        {
+            $query="UPDATE URL SET notify_now = $this->notif_now ,current_value = $this->current_value WHERE  url_id =  $this->url_id";
+            $rslt=mysqli_query($con,$query);
+            echo "success ".$this->url_id." : ".$this->current_value ;
         }
 
 }
