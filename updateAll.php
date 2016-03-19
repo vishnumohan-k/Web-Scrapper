@@ -7,6 +7,5 @@ $query="select url_id from URL";
                 $url_id = $row[0];
 				$item = new URL();
                 $item->update($url_id);
-                echo $url_id;
                 } 
 ?>
