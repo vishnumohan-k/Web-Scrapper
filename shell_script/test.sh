@@ -1,3 +1,4 @@
 #! `which bash`
 php=`which php`
-$php amazonsc.php 
+$php /home/xcavenger/shop/updateAll.php -q 
+echo "success"
