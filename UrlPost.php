@@ -54,4 +54,5 @@ else
 
 $query=mysqli_query($con,"INSERT INTO Wish_Url(wishlist_id,url_id) VALUES ($wishlist_id,$url_id)");
 echo "success insertion to Wish_Url,URL,Wishlist pls chek tables after testing remove this echo with redirection to another page";
+//header("Location: Wishlist.php");
 ?>

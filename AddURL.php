@@ -17,6 +17,7 @@ function Show_txtbox(obj1,obj2)
  
 }
 
+
 </script>
 
 </head>
@@ -83,7 +84,7 @@ function Show_txtbox(obj1,obj2)
                 </div>
                 <br/>
                 <div class="align-center" style="text-align:center">
-                    <button type="submit" name="register" class="btn btn-default" id="login" style="font-size: 15px;font-weight: bold;">Add to WishList</button>&nbsp;&nbsp;&nbsp;
+                    <button type="submit" name="register" class="btn btn-default" id="login"  style="font-size: 15px;font-weight: bold;">Add to WishList</button>&nbsp;&nbsp;&nbsp;
                     <button type="reset" name="cancel" class="btn btn-default" id="reset" style="font-size: 15px;font-weight: bold;">Cancel</button>
                 </div>
             </form>
