@@ -8,7 +8,7 @@
     <div class="container" >
     <div class="row" >
         <div style="width:100%; margin:0 auto; border: thin solid grey; border-radius: 25px;padding: 20px;">
-          <form method="POST" action="">
+          <form method="POST" action="Item.php">
             <div class="form-group has-feedback text-center">
               <label id="dis"><h3>Choose Your WishList :</h3></label>   
               <!--<select class="form-control" name="" style="width: 225px;margin-left: 30px;font-size: 16px;display: inline-block; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);font-weight: bold; ">
