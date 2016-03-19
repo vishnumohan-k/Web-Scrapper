@@ -23,7 +23,8 @@ function Show_div(obj1)
                  <h2 class="text-center">Your Product</h2>
                 <br/>
                 <?php
-
+                    $url_id = $_GET['Url_id'];
+                    echo "URL_ID:".$url_id;
                 ?>
             <div class="form-group has-feedback text-center">
                 <label id="dis"><h4>Product Name:</h4></label>

@@ -53,13 +53,13 @@
                    
                         while($row1=mysqli_fetch_row($rslt1)) 
                         { 
-                            $query2="select url,title,current_value from URL where url_id = '".$row1[0]."'";
+                            $query2="select url,title,current_value,url_id from URL where url_id = '".$row1[0]."'";
                             $rslt2=mysqli_query($con,$query2);
                             while($row2=mysqli_fetch_array($rslt2))
                             {
                                                                      
                                 echo"<tr>";
-                                echo"<td><a href='";echo "Item.php";echo "'>"."<b>".$row2['title']."</b>"."</a></td>";
+                                echo"<td><a href='";echo "Item.php?Url_id=";echo $row1[0];echo "'>"."<b>".$row2['title']."</b>"."</a></td>";
                                 echo"<td>".$row2['current_value']."</td>";
                                 echo"<td><a href='";echo $row2['url'];echo "'>"."<i>Go To Page</i>"."</a></td>";
                                 echo "</tr>";                            }            
