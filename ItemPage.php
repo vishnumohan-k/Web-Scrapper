@@ -49,11 +49,23 @@ function Show_div(obj1)
                       echo "</div>";
                       }
                     }
+                                  
                 ?>
                              
                 <br/>
                 <div class="align-center" style="text-align:center">
-                    <button type="button" onclick="Show_div('histo')" name="history" class="btn btn-default" id="history" style="font-size: 15px;font-weight: bold;">View History</button>&nbsp;&nbsp;&nbsp;
+                <?php
+                    
+                    echo "<button type='button' onclick='location.href =&#039";
+                     echo "History.php?Url_id=";
+                    echo $url_id;
+                    echo "&#039";
+                    echo "'";
+                    echo "class='btn btn-default' style='font-size: 15px;font-weight: bold;' autofocus";
+                    echo ">";
+                    echo "View History";
+                    echo "</button>&nbsp;&nbsp;&nbsp;";  
+                  ?>
                     <button type="button" onclick="Show_div('predi')" name="predict" class="btn btn-default" id="predict" style="font-size: 15px;font-weight: bold;">Predict Price</button>&nbsp;&nbsp;&nbsp;
                      <button type="submit" name="Gosite" class="btn btn-default" id="gosite" style="font-size: 15px;font-weight: bold;">Go To Product Page</button>&nbsp;&nbsp;&nbsp;
                      <button type="submit" name="Delete" class="btn btn-default" id="delete" style="font-size: 15px;font-weight: bold;">Delete Product</button>&nbsp;&nbsp;&nbsp;
