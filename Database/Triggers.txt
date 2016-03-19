@@ -1,0 +1,11 @@
+1.URL_Insert
+-------------
+CREATE TRIGGER URL_Insert AFTER INSERT ON URL FOR EACH ROW INSERT INTO URL_history(url_id_hist, price , time) VALUES (NEW.url_id,NEW.current_value,NOW() );
+
+2.URL_Update
+-------------
+CREATE TRIGGER URL_Update AFTER UPDATE ON URL FOR EACH ROW INSERT INTO URL_history(url_id_hist, price , time) VALUES (NEW.url_id,NEW.current_value,NOW() );
+
+
+show triggers;//use to see triggers in database
+drop trigger <name>;//only use to delete trigger
