@@ -2,8 +2,15 @@
 <head>
   <title></title>
   <link rel="stylesheet" type="text/css" media="all" href="tablestyle.css" />
+      <script type='text/javascript'>
+        function updatePrice()
+        {
+            $.ajax({url:'updatePerUser.php'});
+        }
+    </script>
 </head>
-        <body>
+
+        <body onload=updatePrice();>
         <br><hr>
     <div class="container" >
     <div class="row" >
