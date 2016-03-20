@@ -89,8 +89,10 @@ class URL
             $date = date('Y/m/d H:i:s');
             $this->title = $title[0][0];
             $temp1 =  $posts[0][0];
-            $temp1 = preg_replace('/[^0-9\.]/', '',$temp1);
-            $this->current_value =  floatval($temp1);
+            $temp1 = preg_replace('/[^0-9]/', '',$temp1);
+            $temp1 =  floatval($temp1);
+            $temp1 = $temp1 /100 ;
+            $this->current_value =  $temp1;
             if ( $this->notif_value < $this->current_value )
             {
                 $this->notif_now = 0;
