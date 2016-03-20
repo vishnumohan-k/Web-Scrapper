@@ -44,7 +44,7 @@
                         die('Could not get data: ' . mysql_error());
                     }     
                     echo "<select class='target form-control' name='' style='width: 225px;margin-left: 30px;font-size: 16px;display: inline-block; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);font-weight: bold; ' autofocus>";
-                    echo "<option disabled selected value> -- select an option -- </option>-->";
+                    //echo "<option disabled selected value> -- select an option -- </option>-->";
                     while($row=mysqli_fetch_row($rslt)) 
                     {
                         

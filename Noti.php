@@ -62,7 +62,8 @@
                                 echo"<td><a href='";echo "Item.php?Url_id=";echo $row1[0];echo "'>"."<b>".$row2['title']."</b>"."</a></td>";
                                 echo"<td>".$row2['current_value']."</td>";
                                 echo"<td><a href='";echo $row2['url'];echo "'>"."<i>Go To Page</i>"."</a></td>";
-                                echo "</tr>";                            }            
+                                echo "</tr>";                            
+                            }            
                         }
 
                     }
