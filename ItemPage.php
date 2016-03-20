@@ -26,7 +26,8 @@ function Show_div(obj1)
                  <h2 class="text-center"></h2>
                 <?php
                     $url_id = $_GET['Url_id'];
-                    //echo "URL_ID:".$url_id;
+                    echo "<input type='hidden' name='Url_id' id='hiddenField' value='";
+                    echo $url_id."'/>";
                     include 'dbconnect.php';
                     $query="select url,title,regx_id_url,current_value from URL where url_id = '".$url_id."'";
                     $rslt=mysqli_query($con,$query);
