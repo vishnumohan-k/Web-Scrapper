@@ -18,12 +18,13 @@ class URL
         {
         include "dbconnect.php";
         $this->url_id=$param;
-        $query="select url, notif_value from URL where url_id = ".$this->url_id."";
+        $query="select url, notif_value ,current_value from URL where url_id = ".$this->url_id."";
         $rslt=mysqli_query($con,$query);
            while($row=mysqli_fetch_row($rslt)) {
                 $this->url=$row[0];           
                 $this->notif_value=$row[1];
                 $this->notif_greater = 0 ;
+                $this->current_value = $row[2];
                 }                                                                                       
             $this->getRegx($con);
             $this->updateDB($con);
@@ -92,7 +93,10 @@ class URL
             $temp1 = preg_replace('/[^0-9]/', '',$temp1);
             $temp1 =  floatval($temp1);
             $temp1 = $temp1 /100 ;
+            if($temp1 > 0)
+            {
             $this->current_value =  $temp1;
+            }
             if ( $this->notif_value < $this->current_value )
             {
                 $this->notif_now = 0;
