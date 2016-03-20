@@ -1,4 +1,4 @@
 #! `which bash`
 php=`which php`
-$php /home/xcavenger/shop/updateAll.php -q 
+$php /home/vishnu/shop/updateAll.php -q 
 echo "success"
