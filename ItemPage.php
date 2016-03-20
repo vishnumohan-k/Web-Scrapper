@@ -19,7 +19,7 @@ function Show_div(obj1)
     <div class="container" >
     <div class="row" >
         <div style="width:100%; margin:0 auto; border: thin solid grey; border-radius: 25px;padding: 20px;">
-            <form method="POST" action="">
+            <form method="POST" action="Prediction.php">
               <div class="form-group has-feedback text-center" style="color: #800000">
                     <label id="dis"><h1><u>Product Details</u></h1></label>   
             </div> 
@@ -92,17 +92,21 @@ function Show_div(obj1)
                       echo ">";
                       echo "Delete Product";
                       echo "</button>&nbsp;&nbsp;&nbsp;";  
+
                   ?>
 
                 </div>
-                <div class="form-group has-feedback text-center" id="histo" style="display:none;">
+                <div class="form-group has-feedback text-center" id="histo" style="display:;">
                     
                 </div>
                 <div class="form-group has-feedback text-center" id="predi" style="display:none;">
-                   <input type="date" id="date" placeholder="Enter Date" > 
-                   <button type="submit" name="pr" class="btn btn-default" id="pr" style="font-size: 15px;font-weight: bold;">predict price</button>&nbsp;&nbsp;&nbsp;
+                <?php
+                   	echo "<br><input type='date' name='dat' id='dat' placeholder='Enter Date(dd/mm/yyyy)' value=''>&nbsp;&nbsp;";
+                   	echo "<input type='submit' name='pr' class='btn btn-default' id='pr' style='font-size: 15px;font-weight: bold;' value='Predict'>";
+                   	//echo "&nbsp;&nbsp;&nbsp";
+                  ?>
                 </div>
-
+                
             </form>
         </div>
     </div>
