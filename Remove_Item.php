@@ -14,6 +14,7 @@ $rslt=mysqli_query($con,$query);
 $query="delete from URL where url_id = '".$url_id."'";
 $rslt=mysqli_query($con,$query);
 //echo "delete suceesful";
-header("Location: Wishlist.php");
+echo "alert('your product deleted')";
+//header("Location: Wishlist.php");
 
 ?>

@@ -26,7 +26,8 @@ function Show_div(obj1)
                  <h2 class="text-center"></h2>
                 <?php
                     $url_id = $_GET['Url_id'];
-                    //echo "URL_ID:".$url_id;
+                    echo "<input type='hidden' name='Url_id' id='hiddenField' value='";
+                    echo $url_id."'/>";
                     include 'dbconnect.php';
                     $query="select url,title,regx_id_url,current_value from URL where url_id = '".$url_id."'";
                     $rslt=mysqli_query($con,$query);
@@ -101,9 +102,9 @@ function Show_div(obj1)
                 </div>
                 <div class="form-group has-feedback text-center" id="predi" style="display:none;">
                 <?php
-                   	echo "<br><input type='date' name='dat' id='dat' placeholder='Enter Date(dd/mm/yyyy)' value=''>&nbsp;&nbsp;";
-                   	echo "<input type='submit' name='pr' class='btn btn-default' id='pr' style='font-size: 15px;font-weight: bold;' value='Predict'>";
-                   	//echo "&nbsp;&nbsp;&nbsp";
+                    echo "<br><input type='date' name='dat' id='dat' placeholder='Enter Date(dd/mm/yyyy)' value=''>&nbsp;&nbsp;";
+                    echo "<input type='submit' name='pr' class='btn btn-default' id='pr' style='font-size: 15px;font-weight: bold;' value='Predict'>";
+                    //echo "&nbsp;&nbsp;&nbsp";
                   ?>
                 </div>
                 

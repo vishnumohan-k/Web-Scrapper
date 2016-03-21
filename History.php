@@ -35,7 +35,7 @@ while($row=mysqli_fetch_row($rslt))
 echo "<div class='form-group' style='text-align:center'>";
                       echo "<label id='dis'><h3 class='text-center'> &nbsp;<b> ".$title."</h3></label>"; 
 
-$query="select price,time from URL_history where url_id_hist = '".$url_id."'";
+$query="select price,time from URL_history where url_id_hist = '".$url_id."' ORDER BY time DESC";
 $rslt=mysqli_query($con,$query);
 while($row=mysqli_fetch_array($rslt))
 {
