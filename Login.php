@@ -1,6 +1,6 @@
 <?php
 include 'dbconnect.php';
-if (($_POST['email']=="admin@gmail.com") && ($_POST['pwd']=="admin")) 
+if (($_POST['email']=="admin@gmail.com") && ($_POST['pwd']=="Admin")) 
 {
    session_start();
    $_SESSION['username']=$_POST['pwd'];

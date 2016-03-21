@@ -1,4 +1,4 @@
-<select class="target" style="width: 300px;margin-left: 70px;font-size: 15px;font-weight: bold;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); "> 
+<select class="target form-control" style="width: 300px;margin-left: 70px;font-size: 15px;font-weight: bold;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); "> 
 <option value="0" >select any option</option>
 <?php
 include 'dbconnect.php';

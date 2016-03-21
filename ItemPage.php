@@ -74,7 +74,7 @@ function Show_div(obj1)
                     echo "</button>&nbsp;&nbsp;&nbsp;";  
 
                 ?>
-                    <button type="button" onclick="Show_div('predi')" name="predict" class="btn btn-default" id="predict" style="font-size: 15px;font-weight: bold;">Predict Price</button>&nbsp;&nbsp;&nbsp;
+                  <!-- <button type="button" onclick="Show_div('predi')" name="predict" class="btn btn-default" id="predict" style="font-size: 15px;font-weight: bold;">Predict Price</button>&nbsp;&nbsp;&nbsp;-->
                    
                   <?php
                      // echo "<a href='"; echo $url;    echo "'class='button'>Go to Product page</a>&nbsp;&nbsp;&nbsp;";

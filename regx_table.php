@@ -8,19 +8,19 @@ $regx_id = $_GET['regx_id'];
             die('Could not get data: ' . mysql_error());
         }  $f=0; 
         while($row=mysqli_fetch_row($rslt)) 
-        { $f=1;
-
-        echo "<br>HOST : ";
+        {
+         $f=1;
+        echo "<br><b>HOST  </b>";
         echo "<input type='text' name='host' value='".$row[1]."'style='font-size: 15px;font-weight: bold;' class='form-control' id='tregx' autofocus required>";
  
 
-        echo "<br>title regx: ";
+        echo "<br><b>Title Regex </b> ";
         echo "<input type='text' name='title' value='".$row[2]."'style='font-size: 15px;font-weight: bold;' class='form-control' id='tregx' autofocus required>";
 
-        echo "<br>price regx: ";
+        echo "<br><b>Price Regex </b>";
         echo "<input type='text' name='price' value='".$row[3]."'style='font-size: 15px;font-weight: bold;' class='form-control' id='tregx' autofocus required>";
         
-        echo "<br>Discription : ";
+        echo "<br><b>Description<b>";
         echo "<input type='text' name='disc' value='".$row[4]."'style='font-size: 15px;font-weight: bold;' class='form-control' id='tregx' autofocus required>";
  
 
@@ -30,5 +30,6 @@ $regx_id = $_GET['regx_id'];
         echo "<input type='hidden' name='regx_id' id='hiddenField' value='";
         echo $regx_id."'/>";
         echo "<br><button type='submit' name='dd' class='btn btn-default' id='Addregx'  style='font-size: 15px;font-weight: bold;''>Update Regex</button>&nbsp;&nbsp;&nbsp;";
+        echo "<button type='reset' name='cancel' class='btn btn-default' id='reset' style='font-size: 15px;font-weight: bold;''>Cancel</button>";
         }
 ?>

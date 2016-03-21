@@ -1,9 +1,4 @@
-<?php
-//echo "Add new regx";
-?>
-<!--<?php
-//include 'AddURL.html';
-?>-->
+
 <html>
 <head>
   <title></title>

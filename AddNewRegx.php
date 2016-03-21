@@ -11,27 +11,26 @@
         <br><hr>
     <div class="container" >
     <div class="row" >
-    <!--<h3><marquee behavior="scroll" direction="left">Add Product URL from Ebay.in & Amazon.ca</marquee></h3>-->
         <div style="width:500px; margin:0 auto; border: thin solid grey; border-radius: 25px;padding: 20px;">
             <form method="POST" action="">
                  <u><h2 class="text-center">New Regular Expression</h2></u>
                 <br/>
                 <div class="form-group has-feedback text-center">
                 <input type="text" name="host" style="font-size: 15px;font-weight: bold;" class="form-control" id="host" placeholder="Enter Host Name" autofocus required>
-                <i class="glyphicon glyphicon-scissors form-control-feedback"></i><br>
+                <i class="glyphicon glyphicon-home form-control-feedback"></i><br>
                 </div>
 				<div class="form-group has-feedback text-center">
                 <input type="text" name="tregx" style="font-size: 15px;font-weight: bold;" class="form-control" id="tregx" placeholder="Enter Regular Expression for Title" autofocus required>
-                <i class="glyphicon glyphicon-scissors form-control-feedback"></i><br>
+                <i class="glyphicon glyphicon-text-color form-control-feedback"></i><br>
                 </div>
                 <div class="form-group has-feedback text-center">
                 <input type="text" name="pregx" style="font-size: 15px;font-weight: bold;" class="form-control" id="pregx" placeholder="Enter Regular Expression for Price" autofocus required>
-                <i class="glyphicon glyphicon-scissors form-control-feedback"></i><br>
+                <i class="glyphicon glyphicon-oil form-control-feedback"></i><br>
                 </div>
 
                 <div class="form-group has-feedback text-center">
                 <input type="text" name="desc" style="font-size: 15px;font-weight: bold;" class="form-control" id="desc" placeholder="Enter Description for regular expression" autofocus required>
-                <i class="glyphicon glyphicon-scissors form-control-feedback"></i><br>
+                <i class="glyphicon glyphicon-text-background form-control-feedback"></i><br>
                 </div>
                 <br/>
                 <div class="align-center" style="text-align:center">

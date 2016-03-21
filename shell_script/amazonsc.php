@@ -1,8 +1,8 @@
 <?php
-$html=file_get_contents("http://www.amazon.in/gp/product/B00N2BWF6Q/ref=s9_simh_gw_p364_d29_i3?pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=desktop-6&pf_rd_r=122QGC523ZAHB1Q0APX4&pf_rd_t=36701&pf_rd_p=864400327&pf_rd_i=desktop");
+$html=file_get_contents("http://www.amazon.in/Ray-Ban-Aviator-Sunglasses-RB3026-W202762/dp/B00KVC10H4/ref=sr_1_2?s=apparel&ie=UTF8&qid=1458592571&sr=1-2");
 
 preg_match_all('/<span id="productTitle" class=".*?">(.*?)<\/span>/s',
-    $html,
+    $html,http://www.amazon.in/WD-Passport-WDBBKD0020BBK-Portable-External/dp/B00ZFDD3YM/ref=sr_1_3?s=com
     $title,
     PREG_SET_ORDER
 );

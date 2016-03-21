@@ -10,7 +10,7 @@
         <title>
         <?php
         session_start();
-        echo $_SESSION['username']." Page";
+        echo $_SESSION['username']." -Mode";
         ?>
         </title>
     <!--link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -40,7 +40,7 @@
 
                     <ul class="nav navbar-nav">
                     <li><a href="AddRegx.php"><i class="glyphicon glyphicon-plus-sign"></i> Add New Regex</a></li>
-                    <li><a href="UpdateRegx.php"><i class="glyphicon glyphicon-plus-sign"></i> Update Regex</a></li>
+                    <li><a href="UpdateRegx.php"><i class="glyphicon glyphicon-pencil"></i> Update Regex</a></li>
                     </ul>
                     <!--<form method="POST" action="search.php" class="navbar-form navbar-left" role="search">
                         <div class="form-group">
@@ -60,7 +60,7 @@
             else
             {
                 echo "<a href='AdminPage.php' style='text-decoration:none'>";
-                echo "<strong>Welcome ".$_SESSION['username']."</strong></a>";
+                echo "<strong>Welcome ".$_SESSION['username']."<i class='glyphicon glyphicon-cog'></i></strong></a>";
             }
             session_write_close ();
             ?>
