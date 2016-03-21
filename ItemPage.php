@@ -20,6 +20,7 @@ function Show_div(obj1)
     <div class="row" >
         <div style="width:100%; margin:0 auto; border: thin solid grey; border-radius: 25px;padding: 20px;">
             <form method="POST" action="Prediction.php">
+            <h3><b><a href="Wishlist.php" class="button" style="margin-left:900px" >Back To Wishlist</a></b></h3>
               <div class="form-group has-feedback text-center" style="color: #800000">
                     <label id="dis"><h1><u>Product Details</u></h1></label>   
             </div> 
