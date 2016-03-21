@@ -1,3 +1,6 @@
+<?php
+//echo "string";
+?>
 <head>
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +10,7 @@
         <title>
         <?php
         session_start();
-        echo "user-".$_SESSION['username'];
+        echo $_SESSION['username']." Page";
         ?>
         </title>
     <!--link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -27,7 +30,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="USER.php">Easy Shopper</a>
+                    <a class="navbar-brand" href="AdminPage.php">Easy Shopper</a>
                     
                 </div>
 
@@ -36,9 +39,8 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                     <ul class="nav navbar-nav">
-                    <li><a href="Wishlist.php"><i class="glyphicon glyphicon-shopping-cart"></i> WishList</a></li>
-                    <li><a href="AddingURL.php"><i class="glyphicon glyphicon-plus-sign"></i> Add URL</a></li>
-                    <li><a href="Notification.php"><i class="glyphicon glyphicon-globe"></i> Notifications</a></li>
+                    <li><a href="AddRegx.php"><i class="glyphicon glyphicon-plus-sign"></i> Add New Regex</a></li>
+                    <li><a href="UpdateRegx.php"><i class="glyphicon glyphicon-plus-sign"></i> Update Regex</a></li>
                     </ul>
                     <!--<form method="POST" action="search.php" class="navbar-form navbar-left" role="search">
                         <div class="form-group">
@@ -57,8 +59,8 @@
             }
             else
             {
-                echo "<a href='USER.php' style='text-decoration:none'>";
-                echo "<strong>".$_SESSION['username']."</strong></a>";
+                echo "<a href='AdminPage.php' style='text-decoration:none'>";
+                echo "<strong>Welcome ".$_SESSION['username']."</strong></a>";
             }
             session_write_close ();
             ?>

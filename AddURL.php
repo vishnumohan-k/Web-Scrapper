@@ -26,6 +26,7 @@ function Show_txtbox(obj1,obj2)
         <br><hr>
     <div class="container" >
     <div class="row" >
+    <!--<h3><marquee behavior="scroll" direction="left">Add Product URL from Ebay.in & Amazon.ca</marquee></h3>-->
         <div style="width:500px; margin:0 auto; border: thin solid grey; border-radius: 25px;padding: 20px;">
             <form method="POST" action="UrlPost.php">
                  <h2 class="text-center">Add Your Product</h2>
