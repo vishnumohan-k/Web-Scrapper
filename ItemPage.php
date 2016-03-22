@@ -70,7 +70,7 @@ function Show_div(obj1)
                     echo "'";
                     echo "class='btn btn-default' style='font-size: 15px;font-weight: bold;' autofocus";
                     echo ">";
-                    echo "View History";
+                    echo "View History & Chart";
                     echo "</button>&nbsp;&nbsp;&nbsp;";  
 
                 ?>

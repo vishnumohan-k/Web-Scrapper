@@ -7,7 +7,7 @@
         <br><hr>
     <div class="container" >
     <div class="row" >
-        <div style="width:75%; margin:0 auto; border: thin solid grey; border-radius: 25px;padding: 20px;">
+        <div style="width:100%; margin:0 auto; border: thin solid grey; border-radius: 25px;padding: 20px;">
           <form method="POST" action="">
              
             </form>
@@ -15,9 +15,10 @@
 $url_id = $_GET['Url_id'];
 echo "<h4><b><a href='Item.php?Url_id=";
 echo $url_id;
-echo "'class='button' style='margin-left:600px' >";
+echo "'class='button' style='margin-left:900px' >";
 echo "Back To Product Page";
 echo "</a></b></h4>";
+include 'historyChart.php';
 //echo "URL_ID:".$url_id;
 include 'dbconnect.php';
 echo"<table border='1' align='center' width='100%'>

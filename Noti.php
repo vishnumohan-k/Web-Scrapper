@@ -67,7 +67,7 @@
                                 echo"<tr>";
                                 echo"<td><a href='";echo "Item.php?Url_id=";echo $row1[0];echo "'>"."<b>".$row2[1]."</b>"."</a></td>";
                                 echo"<td>".$row2[2]."</td>";
-                                echo"<td><a href='";echo $row2[0];echo "'>"."<i>Go To Page</i>"."</a></td>";
+                                echo"<td><a href='";echo $row2[0];echo "'>"."<i>Visit Page</i>"."</a></td>";
                                 echo "</tr>";                            
                             }            
                         }
