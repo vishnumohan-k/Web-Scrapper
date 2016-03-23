@@ -55,16 +55,19 @@
                     }  
                     echo "</select></div>";
                     echo "<div id='kkk'></div>";
-                    echo  "<div id='listes'></div>"
+                    echo  "<div id='listes'></div>";                   
                 ?>
 <script>
 $( "select" )
   .change(function () {
     var str = "file.php?wish_id=";
+    var str1 = "wishlist_chart.php?wish_id=";
     $( "select option:selected" ).each(function() {
       str += $( this ).val() + " ";
+      str1 += $( this ).val() + " ";
     });
     $('#listes').load(str).fadeIn('slow');
+    //$('#chart').load('chart1.php').fadeIn('slow');
   })
   .change();
 </script>                 
