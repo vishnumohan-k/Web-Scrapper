@@ -93,7 +93,8 @@ function Show_div(obj1)
                       echo "class='btn btn-default' style='font-size: 15px;font-weight: bold;' autofocus";
                       echo ">";
                       echo "Delete Product";
-                      echo "</button>&nbsp;&nbsp;&nbsp;";  
+                      echo "</button>&nbsp;&nbsp;&nbsp;";
+                      //include 'historyChart.php';  
 
                   ?>
 

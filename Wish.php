@@ -55,7 +55,8 @@
                     }  
                     echo "</select></div>";
                     echo "<div id='kkk'></div>";
-                    echo  "<div id='listes'></div>";                   
+                   	echo  "<div id='listes'></div>";                
+                    include 'chart1.php';   
                 ?>
 <script>
 $( "select" )
